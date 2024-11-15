@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-GB"
+      dir="ltr"
+      class="">
+<head>
+    <title>DuckStack</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="token" content="M8SKXW08Op0PPHblg8UNmM9OXqnc1JxjSH1xevtT">
+    <meta name="base-url" content="http://localhost/bookstack">
+    <meta name="theme-color" content="#206ea7"/>
+
+    <!-- Social Cards Meta -->
+    <meta property="og:title" content="DuckStack">
+    <meta property="og:url" content="http://localhost/bookstack">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="dist/styles.css@version=v24.10.1.css">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="256x256" href="uploads/images/system/2024-11/rubber-duck.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="uploads/images/system/2024-11/966rubber-duck.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="uploads/images/system/2024-11/966rubber-duck.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="uploads/images/system/2024-11/PCyrubber-duck.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="uploads/images/system/2024-11/zvcrubber-duck.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="uploads/images/system/2024-11/PUqrubber-duck.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- OpenSearch -->
+    <link rel="search" type="application/opensearchdescription+xml" title="DuckStack" href="opensearch.xml">
+
+    <!-- Custom Styles & Head Content -->
+    <style>
+    :root {
+        --color-primary: #206ea7;
+        --color-primary-light: rgba(32,110,167,0.15);
+        --color-link: #206ea7;
+        --color-bookshelf: #a94747;
+        --color-book: #077b70;
+        --color-chapter: #af4d0d;
+        --color-page: #206ea7;
+        --color-page-draft: #7e50b1;
+    }
+</style>
+    
+    
+    <!-- Translations for JS -->
+    </head>
+<body
+          class="tri-layout ">
+
+        <a class="px-m py-s skip-to-content-link print-hidden" href="index.html#main-content">Skip to main content</a>    <div component="notification"
+     option:notification:type="success"
+     option:notification:auto-hide="true"
+     option:notification:show="false"
+     style="display: none;"
+     class="notification pos"
+     role="alert">
+    <svg class="svg-icon" data-icon="check-circle" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg> <span></span><div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+</div>
+
+<div component="notification"
+     option:notification:type="warning"
+     option:notification:auto-hide="false"
+     option:notification:show="false"
+     style="display: none;"
+     class="notification warning"
+     role="alert">
+    <svg class="svg-icon" data-icon="info" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 17h2v-6h-2zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8M11 9h2V7h-2z"/></svg> <span></span><div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+</div>
+
+<div component="notification"
+     option:notification:type="error"
+     option:notification:auto-hide="false"
+     option:notification:show="false"
+     style="display: none;"
+     class="notification neg"
+     role="alert">
+    <svg class="svg-icon" data-icon="danger" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27zM12 17.3c-.72 0-1.3-.58-1.3-1.3s.58-1.3 1.3-1.3 1.3.58 1.3 1.3-.58 1.3-1.3 1.3m1-4.3h-2V7h2z"/><path fill="none" d="M0 0h24v24H0z"/></svg> <span></span><div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+</div>    <header id="header" component="header-mobile-toggle" class="primary-background px-xl grid print-hidden">
+    <div class="flex-container-row justify-space-between gap-s items-center">
+        <a href="http://localhost/bookstack" data-shortcut="home_view" class="logo">
+            <img class="logo-image" src="uploads/images/system/2024-11/duck.png" alt="Logo">
+                <span class="logo-text">DuckStack</span>
+    </a>        <div class="hide-over-l py-s">
+            <button type="button"
+                    refs="header-mobile-toggle@toggle"
+                    title="Expand Header Menu"
+                    aria-expanded="false"
+                    class="mobile-menu-toggle"><svg class="svg-icon" data-icon="more" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"/></svg></button>
+        </div>
+    </div>
+
+    <div class="flex-container-column items-center justify-center hide-under-l">
+            <form component="global-search" action="search.html" method="GET" class="search-box" role="search" tabindex="0">
+    <button id="header-search-box-button"
+            refs="global-search@button"
+            type="submit"
+            aria-label="Search"
+            tabindex="-1"><svg class="svg-icon" data-icon="search" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"/><path fill="none" d="M0 0h24v24H0z"/></svg></button>
+    <input id="header-search-box-input"
+           refs="global-search@input"
+           type="text"
+           name="term"
+           data-shortcut="global_search"
+           autocomplete="off"
+           aria-label="Search" placeholder="Search"
+           value="">
+    <div refs="global-search@suggestions" class="global-search-suggestions card">
+        <div refs="global-search@loading" class="text-center px-m global-search-loading"><div class="loading-container">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div></div>
+        <div refs="global-search@suggestion-results" class="px-m"></div>
+        <button class="text-button card-footer-link" type="submit">View All</button>
+    </div>
+</form>        </div>
+
+    <nav refs="header-mobile-toggle@menu" class="header-links">
+        <div class="links text-center">
+            <a class="hide-over-l" href="search.html"><svg class="svg-icon" data-icon="search" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"/><path fill="none" d="M0 0h24v24H0z"/></svg>Search</a>
+            <a href="shelves.html"
+           data-shortcut="shelves_view"><svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg>Shelves</a>
+        <a href="books.html" data-shortcut="books_view"><svg class="svg-icon" data-icon="books" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.252 1.708H8.663a1.77 1.77 0 0 0-1.765 1.764v14.12c0 .97.794 1.764 1.765 1.764h10.59a1.77 1.77 0 0 0 1.764-1.765V3.472a1.77 1.77 0 0 0-1.765-1.764M8.663 3.472h4.412v7.06L10.87 9.208l-2.206 1.324z"/><path fill="none" d="M30.61 3.203h24v24h-24z"/><path d="M2.966 6.61v14c0 1.1.9 2 2 2h14v-2h-14v-14z"/></svg>Books</a>
+        
+        <a href="login.html"><svg class="svg-icon" data-icon="login" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14a2 2 0 0 0-2-2M11 16l4-4-4-4v3H1v2h10z"/></svg>Log in</a>
+        </div>
+            </nav>
+</header>
+
+    <div id="content" components="tri-layout" class="block">
+        
+    <div class="tri-layout-mobile-tabs print-hidden">
+        <div class="grid half no-break no-gap">
+            <button type="button"
+                    refs="tri-layout@tab"
+                    data-tab="info"
+                    aria-label="Tab: Show Secondary Information"
+                    class="tri-layout-mobile-tab px-m py-m text-link">
+                Info
+            </button>
+            <button type="button"
+                    refs="tri-layout@tab"
+                    data-tab="content"
+                    aria-label="Tab: Show Primary Content"
+                    aria-selected="true"
+                    class="tri-layout-mobile-tab px-m py-m text-link active">
+                Content
+            </button>
+        </div>
+    </div>
+
+    <div refs="tri-layout@container" class="tri-layout-container"  >
+
+        <div class="tri-layout-sides print-hidden">
+            <div class="tri-layout-sides-content">
+                <div class="tri-layout-right print-hidden">
+                    <aside class="tri-layout-right-contents">
+                            <div class="actions mb-xl">
+        <h5>Actions</h5>
+        <div class="icon-list text-link">
+                        <div>
+    <form action="http://localhost/bookstack/preferences/change-view/bookshelves" method="POST" class="inline">
+        <input type="hidden" name="_token" value="M8SKXW08Op0PPHblg8UNmM9OXqnc1JxjSH1xevtT" autocomplete="off">
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="_return" value="http://localhost/bookstack">
+
+                    <button type="submit" name="view" value="list" class="icon-list-item text-link">
+                <span class="icon"><svg class="svg-icon" data-icon="list" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 14h4v-4H4zm0 5h4v-4H4zM4 9h4V5H4zm5 5h12v-4H9zm0 5h12v-4H9zM9 5v4h12V5z"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+                <span>List View</span>
+            </button>
+            </form>
+</div>            <a href="tags.html" class="icon-list-item">
+                <span><svg class="svg-icon" data-icon="tag" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.41-8.83-8.83c-.37-.37-.88-.58-1.41-.58H4c-1.1 0-2 .9-2 2v7.17c0 .53.21 1.04.59 1.41l8.83 8.83c.78.78 2.05.78 2.83 0l7.17-7.17c.78-.78.78-2.04-.01-2.83M6.5 8C5.67 8 5 7.33 5 6.5S5.67 5 6.5 5 8 5.67 8 6.5 7.33 8 6.5 8"/></svg></span>
+                <span>View Tags</span>
+            </a>
+            <button component="expand-toggle"
+        option:expand-toggle:target-selector=".entity-list.compact .entity-item-snippet"
+        option:expand-toggle:update-endpoint="http://localhost/bookstack/preferences/change-expansion/home-details"
+        option:expand-toggle:is-open="false"
+        type="button"
+        class="icon-list-item text-link">
+    <span><svg class="svg-icon" data-icon="expand-text" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 19h6v-2H4zM20 5H4v2h16zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3 3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4"/><path fill="none" d="M0 0h24v24H0z"/></svg></span>
+    <span>Toggle Details</span>
+</button>
+            <form action="http://localhost/bookstack/preferences/toggle-dark-mode" method="post">
+    <input type="hidden" name="_token" value="M8SKXW08Op0PPHblg8UNmM9OXqnc1JxjSH1xevtT" autocomplete="off">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="_return" value="http://localhost/bookstack">
+            <button class="icon-list-item text-link"><span><svg class="svg-icon" data-icon="dark-mode" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2"/></svg></span><span>Dark Mode</span></button>
+    </form>        </div>
+    </div>
+                    </aside>
+                </div>
+
+                <div class="tri-layout-left print-hidden" id="sidebar">
+                    <aside class="tri-layout-left-contents">
+                            <div class="mb-xl">
+    <h5>Recent Books</h5>
+    <div class="entity-list compact">
+                    <a href="books/biblioteka-ualixanova.html" class="book   entity-list-item" data-entity-type="book" data-entity-id="4">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Библиотека Уалиханова</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="books/vtk.html" class="book   entity-list-item" data-entity-type="book" data-entity-id="3">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">ВТК</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">Книга для ВТШ</p>
+</div>
+    </div>
+</a>                    <a href="books/galereia-myrzaxmetova.html" class="book   entity-list-item" data-entity-type="book" data-entity-id="2">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Галерея Мырзахметова</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="books/kompiuternye-seti.html" class="book   entity-list-item" data-entity-type="book" data-entity-id="1">
+    <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Компьютерные сети</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">Книга про компьютерные сети. Базовая база с легким углубление во все темы для большего понимания</p>
+</div>
+    </div>
+</a>            </div>
+</div>
+
+<div class="mb-xl">
+    <h5>Recently Updated Pages</h5>
+    <div id="recently-updated-pages">
+        <div class="entity-list compact">
+                    <a href="books/biblioteka-ualixanova/page/ob-universitete.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="15">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Об университете</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"> 
+Кокшетауский университет им. Ш.Уалиханова - 60 лет лидер в системе высшего образования Акмол...</p>
+</div>
+    </div>
+</a>                    <a href="books/biblioteka-ualixanova/page/postuplenie-v-bakalavriat.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="14">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Поступление в бакалавриат</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">Срок приема заявлений:
+1 июля 2024 г. - 25 августа 2024 г.
+Консультации по вопросам приема:
++7...</p>
+</div>
+    </div>
+</a>                    <a href="books/biblioteka-ualixanova/page/elektronnyi-katalog-megapro.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="13">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Электронный каталог MEGAPRO</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">МИССИЯ БИБЛИОТЕКИ
+Библиотека Кокшетауского университета им. Ш. Уалиханова способствует интеллект...</p>
+</div>
+    </div>
+</a>                    <a href="books/galereia-myrzaxmetova/page/241017-den-oon.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="12">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">24.10.17 День ООН</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="books/galereia-myrzaxmetova/page/31117-otkrytie-auditorii-imeni-altynbaeva-m-k.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="11">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">3.11.17 Открытие аудитории имени Алтынбаева М. К.</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="books/galereia-myrzaxmetova/page/akkreditaciia-obrazovatelnyx-programm.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="10">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Аккредитация образовательных программ</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text"></p>
+</div>
+    </div>
+</a>                    <a href="books/vtk/page/kontakty-i-socialnaia-set.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="9">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Контакты и социальная сеть</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">Адрес: г.Кокшетау, ул. Ж. Ташенова, 115Тел: 8/7162/509010 Тел: 8/7162/507523 Тел: 8/7162/328930 Т...</p>
+</div>
+    </div>
+</a>                    <a href="books/vtk/page/specialnosti.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="8">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Специальности</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">Профессиональное Обучение (По Отраслям)
+
+
+Парикмахерское Искусство И Декоративная Косметик...</p>
+</div>
+    </div>
+</a>                    <a href="books/vtk/page/stranica-1.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="7">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Страница 1</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin, nibh vitae tinci...</p>
+</div>
+    </div>
+</a>                    <a href="books/vtk/page/ctranica-pervaia.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="6">
+    <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></span>
+    <div class="content">
+            <h4 class="entity-list-item-name break-text">Cтраница первая</h4>
+            <div class="entity-item-snippet">
+
+    
+    
+    <p class="text-muted break-text">Введение
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin, nibh v...</p>
+</div>
+    </div>
+</a>            </div>
+    </div>
+    <a href="pages/recently-updated.html" class="text-muted block py-xs">View All</a>
+</div>
+
+<div id="recent-activity" class="mb-xl">
+    <h5>Recent Activity</h5>
+    <div class="activity-list">
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="uploads/images/user/2024-11/thumbs-30-30/oggshbo9ml-avatar.png" alt="Шокан Колледж">
+    </div>
+
+<div>
+            <a href="user/sokan-kolledz.html">Шокан Колледж</a>
+    
+    created page
+
+            <a href="books/biblioteka-ualixanova/page/ob-universitete.html">Об университете</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="uploads/images/user/2024-11/thumbs-30-30/oggshbo9ml-avatar.png" alt="Шокан Колледж">
+    </div>
+
+<div>
+            <a href="user/sokan-kolledz.html">Шокан Колледж</a>
+    
+    created page
+
+            <a href="books/biblioteka-ualixanova/page/postuplenie-v-bakalavriat.html">Поступление в бакалавриат</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="uploads/images/user/2024-11/thumbs-30-30/oggshbo9ml-avatar.png" alt="Шокан Колледж">
+    </div>
+
+<div>
+            <a href="user/sokan-kolledz.html">Шокан Колледж</a>
+    
+    created page
+
+            <a href="books/biblioteka-ualixanova/page/elektronnyi-katalog-megapro.html">Электронный каталог MEGAPRO</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="uploads/images/user/2024-11/thumbs-30-30/oggshbo9ml-avatar.png" alt="Шокан Колледж">
+    </div>
+
+<div>
+            <a href="user/sokan-kolledz.html">Шокан Колледж</a>
+    
+    updated shelf
+
+            <a href="shelves/sokan-kolledz.html">Шокан Колледж</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="user_avatar.png" alt="admin">
+    </div>
+
+<div>
+            <a href="user/admin.html">admin</a>
+    
+    updated permissions
+
+            <a href="books/biblioteka-ualixanova.html">Библиотека Уалиханова</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="user_avatar.png" alt="admin">
+    </div>
+
+<div>
+            <a href="user/admin.html">admin</a>
+    
+    updated permissions
+
+            <a href="shelves/sokan-kolledz.html">Шокан Колледж</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="user_avatar.png" alt="admin">
+    </div>
+
+<div>
+            <a href="user/admin.html">admin</a>
+    
+    updated book
+
+            <a href="books/vtk.html">ВТК</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="user_avatar.png" alt="admin">
+    </div>
+
+<div>
+            <a href="user/admin.html">admin</a>
+    
+    created book
+
+            <a href="books/biblioteka-ualixanova.html">Библиотека Уалиханова</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="user_avatar.png" alt="admin">
+    </div>
+
+<div>
+            <a href="user/admin.html">admin</a>
+    
+    updated book
+
+            <a href="books/galereia-myrzaxmetova.html">Галерея Мырзахметова</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+                    <div class="activity-list-item">
+                <div>
+        <img class="avatar" src="uploads/images/user/2024-11/thumbs-30-30/z7lxjkxtvv-avatar.png" alt="Ун. им. Мырзахметова">
+    </div>
+
+<div>
+            <a href="user/un-im-myrzaxmetova.html">Ун. им. Мырзахметова</a>
+    
+    created page
+
+            <a href="books/galereia-myrzaxmetova/page/241017-den-oon.html">24.10.17 День ООН</a>
+    
+    
+    <br>
+
+    <span class="text-muted"><small><svg class="svg-icon" data-icon="time" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"/><path fill="none" d="M0 0h24v24H0z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>1 day ago</small></span>
+</div>
+            </div>
+            </div>
+</div>                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <div class=" tri-layout-middle">
+            <div id="main-content" class="tri-layout-middle-contents">
+                    <main class="content-wrap mt-m card">
+
+    <div class="grid half v-center">
+        <h1 class="list-heading">Shelves</h1>
+        <div class="text-right">
+            <div component="list-sort-control" class="list-sort-container">
+    <div class="list-sort-label">Sort</div>
+    <form refs="list-sort-control@form"
+                        action="http://localhost/bookstack/preferences/change-sort/bookshelves"
+              method="post"
+              >
+        <input type="hidden" name="_return" value="http://localhost/bookstack">
+
+                    <input type="hidden" name="_method" value="PATCH">
+            <input type="hidden" name="_token" value="M8SKXW08Op0PPHblg8UNmM9OXqnc1JxjSH1xevtT" autocomplete="off">
+        
+        <input refs="list-sort-control@sort" type="hidden" value="name" name="sort">
+        <input refs="list-sort-control@order" type="hidden" value="asc" name="order">
+
+        <div class="list-sort">
+            <div component="dropdown" class="list-sort-type dropdown-container">
+                <div refs="dropdown@toggle" aria-haspopup="true" aria-expanded="false" aria-label="Sort Options" tabindex="0">Name</div>
+                <ul refs="dropdown@menu list-sort-control@menu" class="dropdown-menu">
+                                            <li  class="active" ><a href="index.html#" data-sort-value="name" class="text-item">Name</a></li>
+                                            <li ><a href="index.html#" data-sort-value="created_at" class="text-item">Created Date</a></li>
+                                            <li ><a href="index.html#" data-sort-value="updated_at" class="text-item">Updated Date</a></li>
+                                    </ul>
+            </div>
+            <button class="list-sort-dir" type="button" data-sort-dir
+                    aria-label="Sort Direction Toggle - Sort Ascending" tabindex="0">
+                <svg class="svg-icon" data-icon="sort-down" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.034l6.57-6.554h-4.927V2.966h-3.286V14.48H5.43z"/><path d="M0 0h24v24H0z" fill="none"/></svg>            </button>
+        </div>
+    </form>
+</div>        </div>
+    </div>
+
+                        <div class="grid third">
+                                    <a href="shelves/vyssii-texniceskii-kolledz.html" class="grid-card"
+   data-entity-type="bookshelf" data-entity-id="3">
+    <div class="bg-bookshelf featured-image-container-wrap">
+        <div class="featured-image-container" >
+        </div>
+        <svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg>    </div>
+    <div class="grid-card-content">
+        <h2 class="text-limit-lines-2">Высший технический колледж</h2>
+        <p class="text-muted">Книжная полка для ВТК</p>
+    </div>
+    <div class="grid-card-footer text-muted ">
+        <p><svg class="svg-icon" data-icon="star" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Mon, Nov 11, 2024 3:16 PM">Created 3 days ago</span></p>
+        <p><svg class="svg-icon" data-icon="edit" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Thu, Nov 14, 2024 9:50 AM">Updated 1 day ago</span></p>
+    </div>
+</a>                                    <a href="shelves/kursovaia.html" class="grid-card"
+   data-entity-type="bookshelf" data-entity-id="1">
+    <div class="bg-bookshelf featured-image-container-wrap">
+        <div class="featured-image-container" >
+        </div>
+        <svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg>    </div>
+    <div class="grid-card-content">
+        <h2 class="text-limit-lines-2">Курсовая</h2>
+        <p class="text-muted">книги для написания курсовой</p>
+    </div>
+    <div class="grid-card-footer text-muted ">
+        <p><svg class="svg-icon" data-icon="star" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Mon, Nov 11, 2024 12:20 PM">Created 3 days ago</span></p>
+        <p><svg class="svg-icon" data-icon="edit" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Mon, Nov 11, 2024 12:20 PM">Updated 3 days ago</span></p>
+    </div>
+</a>                                    <a href="shelves/universitet-imeni-abaia-myrzaxmetova.html" class="grid-card"
+   data-entity-type="bookshelf" data-entity-id="4">
+    <div class="bg-bookshelf featured-image-container-wrap">
+        <div class="featured-image-container" >
+        </div>
+        <svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg>    </div>
+    <div class="grid-card-content">
+        <h2 class="text-limit-lines-2">Университет имени Абая Мырзахметова</h2>
+        <p class="text-muted">Книжная полка для Университета Абая Мырзахметова</p>
+    </div>
+    <div class="grid-card-footer text-muted ">
+        <p><svg class="svg-icon" data-icon="star" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Mon, Nov 11, 2024 3:17 PM">Created 3 days ago</span></p>
+        <p><svg class="svg-icon" data-icon="edit" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Thu, Nov 14, 2024 9:56 AM">Updated 1 day ago</span></p>
+    </div>
+</a>                                    <a href="shelves/sokan-kolledz.html" class="grid-card"
+   data-entity-type="bookshelf" data-entity-id="2">
+    <div class="bg-bookshelf featured-image-container-wrap">
+        <div class="featured-image-container" >
+        </div>
+        <svg class="svg-icon" data-icon="bookshelf" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="none" d="M1.088 2.566h17.42v17.42H1.088z"/><path d="M4 20.058h15.892V22H4z"/><path fill="none" d="M2.902 1.477h17.42v17.42H2.903z"/><path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z"/></svg>    </div>
+    <div class="grid-card-content">
+        <h2 class="text-limit-lines-2">Шокан Колледж</h2>
+        <p class="text-muted">Книжная полка для колледжа Шокан</p>
+    </div>
+    <div class="grid-card-footer text-muted ">
+        <p><svg class="svg-icon" data-icon="star" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Mon, Nov 11, 2024 3:15 PM">Created 3 days ago</span></p>
+        <p><svg class="svg-icon" data-icon="edit" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"/><path fill="none" d="M0 0h24v24H0z"/></svg><span title="Thu, Nov 14, 2024 10:12 AM">Updated 1 day ago</span></p>
+    </div>
+</a>                            </div>
+                <div>
+            
+        </div>
+    
+</main>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    
+    <div component="back-to-top" class="back-to-top print-hidden">
+        <div class="inner">
+            <svg class="svg-icon" data-icon="chevron-up" role="presentation"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path fill="none" d="M0 0h24v24H0z"/></svg> <span>Back to top</span>
+        </div>
+    </div>
+
+            <script src="dist/app.js@version=v24.10.1" type="module" nonce="hPempwcu3lBlCvbNzOuSElWU"></script>
+        
+    </body>
+</html>
